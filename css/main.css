@@ -172,13 +172,13 @@ header {
   padding: 15px 0;
 }
 
- header .content-wrapper {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-flow: row wrap;
-   margin: 0;
- }
+header .content-wrapper {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 
  header figure {
    width: 60%;
@@ -190,31 +190,31 @@ header {
 
  .header-divider {
    background: #3a3a3a;
-   width: 100%;
    height: 1px;
+   width: 100%;
    margin: 10px 0 20px 0;
  }
 
-header nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row wrap;
-  width: 60%;
-  font-size: 1.125em;
-  font-weight: 700;
-  text-transform: uppercase;
-}
+ header nav {
+   width: 60%;
+   font-size: 1.125em;
+   font-weight: 700;
+   text-transform: uppercase;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-flow: row wrap;
+ }
 
-header nav ul {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
+ header nav ul {
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+ }
 
-header nav ul li {
-  font-size: 1.125em;
-}
+ header nav ul li {
+   font-size: 1.125em;
+ }
 
 footer {
   flex-direction: column;
@@ -305,7 +305,7 @@ input[type=button] {
   text-transform: uppercase;
 }
 
-features {
+.features {
   background: url('../img/unplugged-retreat-features.jpg');
   background-size: cover;
   background-position: center;
@@ -328,6 +328,11 @@ features {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+
+.features i {
+  font-size: 3.75em;
+  margin-bottom: 40px;
 }
 
 .features p {
@@ -364,6 +369,23 @@ features {
   flex-flow: row wrap;
 }
 
+
+.map figure {
+  width: 100%;
+  height: 0;
+  padding-bottom: 125%;
+  overflow: hidden;
+  position: relative;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .contact-section {
   background-color: #2a423a;
   display: flex;
@@ -374,22 +396,6 @@ features {
 
 .contact-content p {
   margin: 0;
-}
-
-.map figure {
-  position: relative;
-  padding-bottom: 80%;
-  height: 0;
-  overflow: hidden;
-  width: 100%;
-}
-
-.map iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 /* -------------- Mobile Styles - FAQ ----------------*/
@@ -527,7 +533,8 @@ h2 {
 
 h3 {
     font-size: 1.5em;
-    line-height: 1.25;  }
+    line-height: 1.25;
+  }
 
   /*Header*/
 header {
@@ -596,26 +603,29 @@ aside .content-wrapper .form {
   }
 
   .features .features-item-description {
-    width: 50%;
+    width: 62%;
   }
 
   /*Reviews*/
 
-.reviews article {
-  display: flex;
-  justify-content: space-between;
-}
-.reviews h2 {
-  width: 85%;
-}
-.rewviwes article figure,
-.reviews article div {
-  width: 49%;  }
+  .reviews article {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.reviews h3 {
-  width: 75%;
-  margin: 0;
-}
+  .reviews h2 {
+    width: 85%;
+  }
+
+  .reviews article figure,
+  .reviews article div {
+    width: 49%;
+  }
+
+  .reviews h3 {
+    width: 75%;
+    margin: 0;
+  }
 
   /*Footer*/
   footer .content-wrapper {
@@ -623,18 +633,15 @@ aside .content-wrapper .form {
   margin: 100px 0;
 }
 
-.footer-content {
+footer .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 
 footer .contact {
   margin-bottom: 0;
-}
-
-footer .copyright {
-  width:100%;
 }
 
 footer h4 {
@@ -644,6 +651,10 @@ footer h4 {
 
 footer p {
     line-height: 1.285;
+}
+
+footer .copyright {
+  width:100%;
 }
 }
 
@@ -704,12 +715,12 @@ footer p {
 @media only screen and (min-width: 1200px) {
   /*Desktop sytles here*/
 
-.content-wrapper {
-  max-width: 960px;
-}
-
 header {
   padding: 15px 0;
+}
+
+.content-wrapper {
+  max-width: 960px;
 }
 
 h2 {
@@ -729,8 +740,8 @@ p {
 /*Hero*/
 
 .hero-area h1{
-  width: 60%;
   font-size: 3.75em;
+  width: 80%;
 }
 
 /*Aside*/
@@ -741,7 +752,7 @@ aside .content-wrapper {
 
 aside .content-wrapper .form-description,
 aside .content-wrapper .form {
-  width: 40%;
+  width: 30%;
 }
 .form-description p {
   font-size: 1.125em;
